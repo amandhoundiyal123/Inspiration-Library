@@ -1,0 +1,1179 @@
+# MASTER BUILD PROMPT — DESIGNVAULT
+## A Private, Personal Design Inspiration Library & AI Design Intelligence Workspace
+
+Act as a senior full-stack web developer, product designer, UX engineer, database architect, and AI integration specialist.
+
+Your task is to design and build a complete, functional, production-minded personal web application called **DesignVault**.
+
+Do not merely explain how to build it. Actually create the application and its working source code in the available development environment.
+
+Think carefully about the architecture, user experience, information structure, data persistence, security, and visual design before implementing anything.
+
+The final product must feel like a real, carefully crafted software product made by a thoughtful independent developer. It must NOT look like a generic AI-generated dashboard, a template marketplace demo, or an overdesigned SaaS landing page.
+
+---
+
+# 1. THE CORE IDEA
+
+DesignVault is my private, personal design inspiration library.
+
+I am a web developer who regularly discovers visual references, website designs, typography, layouts, color palettes, animations, illustrations, posters, interfaces, and other creative work that I want to save for future projects.
+
+Sometimes I save a reference because I want to recreate its visual direction. Sometimes I simply love the design and want to keep it. Sometimes I do not yet know how I will use it, but I want to preserve it so I can return to it later.
+
+I want one organized place where I can collect these references, understand their design language, discover the terminology associated with them, and turn them into useful creative briefs and AI prompts whenever I need to build something.
+
+The application is NOT a social network, public portfolio, recommendation feed, or Pinterest clone.
+
+It is a personal creative knowledge base.
+
+The application should prioritize:
+
+- Saving inspiration quickly.
+- Keeping my collection private.
+- Preserving my original images and reference URLs.
+- Organizing references according to their design styles and my own preferences.
+- Understanding the design principles behind each reference.
+- Building my personal design vocabulary.
+- Generating useful prompts and creative briefs for future projects.
+- Finding saved references quickly.
+- Allowing me to edit, export, back up, and manage my collection.
+
+The central principle is:
+
+**My library belongs to me. The AI helps me understand it, but never controls it.**
+
+My saved references must remain useful even if the AI features are unavailable.
+
+---
+
+# 2. TARGET USER
+
+Build the first version specifically for one individual user: me.
+
+Do not introduce unnecessary multi-user collaboration, social features, public profiles, community feeds, likes from other users, or complicated team permissions.
+
+However, implement secure personal authentication and user-specific data access so my private library is protected.
+
+The interface should be understandable without tutorials. Important actions should be obvious, labels should be clear, and the application should avoid unnecessary complexity.
+
+I want a practical tool that I can use regularly while developing websites and personal projects.
+
+---
+
+# 3. VISUAL DESIGN DIRECTION
+
+This is one of the most important requirements.
+
+The application must have a **minimal, clean, sophisticated, calm, and highly usable interface**.
+
+It should feel like a premium independent creative tool designed by a skilled product designer.
+
+The visual language should combine:
+
+- Minimal editorial design.
+- A refined creative workspace.
+- Subtle design-studio aesthetics.
+- Excellent typography and spacing.
+- A strong focus on the actual saved images.
+- A restrained, functional dark interface.
+
+## Color palette
+
+Use a near-black or deep charcoal background rather than pure black everywhere.
+
+Suggested palette:
+
+- Main background: #111111
+- Secondary surfaces: #181818
+- Elevated surfaces: #202020
+- Primary text: #F2F0EC
+- Secondary text: #A19F9A
+- Borders: #303030
+- Muted accent: a restrained warm ivory or soft neutral tone.
+
+Use these as starting points, not rigid requirements. Adjust them if necessary to achieve a cohesive interface.
+
+Avoid excessive gradients, neon colors, glowing borders, saturated purple accents, and decorative color effects.
+
+Color should communicate function, not decoration.
+
+## Typography
+
+Use a clear, contemporary sans-serif typeface.
+
+Choose a suitable font such as Inter, Geist, or a similarly restrained alternative. Provide a sensible fallback if external font loading fails.
+
+Typography should establish a clear hierarchy through size, weight, spacing, and contrast.
+
+Avoid oversized marketing-style headings throughout the application.
+
+Use readable body text, compact metadata, and strong but restrained section headings.
+
+## Layout
+
+Use a consistent spacing system, clear alignment, and generous breathing room.
+
+The layout should feel intentional rather than empty or crowded.
+
+Use:
+
+- A restrained left sidebar for primary navigation.
+- A compact top bar for search and quick actions.
+- A flexible main content area.
+- A responsive image grid.
+- Clear page titles.
+- Subtle borders and separators.
+- Simple, useful hover and focus states.
+
+Use a masonry-style gallery only if it improves the reference browsing experience. Otherwise, use a consistent responsive grid with varied image aspect ratios handled gracefully.
+
+Images must remain the visual focus.
+
+## UI components
+
+Buttons, cards, inputs, dialogs, menus, tags, and tooltips should have consistent styling.
+
+Use modest corner radii, thin borders, restrained shadows, and smooth transitions.
+
+Use icons consistently from a single icon library if a dependency is appropriate.
+
+Do not use emoji as the primary interface icon system.
+
+Avoid excessive cards nested inside other cards.
+
+Avoid turning every section into a separate bordered container.
+
+Avoid unnecessary charts, statistics, progress rings, badges, decorative illustrations, and empty dashboard widgets.
+
+Do not fill the interface with meaningless placeholder data.
+
+## Avoid AI slop
+
+The following are explicitly prohibited:
+
+- Generic SaaS dashboard templates.
+- Huge welcome banners.
+- Fake productivity metrics.
+- Decorative gradient backgrounds.
+- Excessive glassmorphism.
+- Glowing neon effects.
+- Random floating shapes.
+- Unnecessary pill-shaped controls everywhere.
+- Excessive animations.
+- Repeated cards containing identical placeholder content.
+- Artificially inflated spacing.
+- Unnecessary AI assistant chat bubbles.
+- Marketing copy inside the actual application.
+- Features that look interactive but do nothing.
+
+Every visual element must have a functional or clear aesthetic purpose.
+
+The result should feel quiet, useful, deliberate, and human-designed.
+
+---
+
+# 4. APPLICATION NAVIGATION
+
+Create a simple, intuitive navigation system.
+
+Primary sidebar navigation:
+
+1. All Inspiration
+2. Collections
+3. Design Styles
+4. Favorites
+5. Recently Added
+6. Trash
+
+At the bottom of the sidebar, provide:
+
+- Settings
+- Backup and Export access, either directly or through Settings.
+- Account information and sign-out.
+
+The main content area should change based on the selected navigation item.
+
+Use clear active states without excessive decoration.
+
+The application should not have a public marketing homepage as its primary experience. After authentication, take me directly into my personal library.
+
+For a new account, show a thoughtful empty state that helps me save my first reference.
+
+---
+
+# 5. THE PERSONAL INSPIRATION LIBRARY
+
+This is the foundation of the application.
+
+Build a visual library containing all my saved references.
+
+Each saved reference should support:
+
+- Original image or screenshot, when available.
+- Original website URL, when available.
+- User-defined title.
+- Personal notes.
+- Date added.
+- Last modified date.
+- Favorites status.
+- User-created tags.
+- AI-generated design styles.
+- AI-generated keywords.
+- Associated collections.
+- Optional source website information.
+- AI-generated design analysis, when available.
+- Optional creative brief and reusable prompt.
+
+A reference can contain an image, a URL, or both.
+
+Do not require every field to be filled in. Saving inspiration must remain quick.
+
+## Gallery behavior
+
+Display saved references as visual thumbnails.
+
+Each item should have a clear hover state with a small number of useful actions:
+
+- Open details.
+- Toggle favorite.
+- Edit or access a context menu.
+
+Do not permanently cover images with excessive metadata.
+
+Display titles and a small amount of relevant information without making the gallery visually noisy.
+
+Clicking a reference should open a dedicated detail page or a well-designed detail panel. Choose the approach that provides the best usability.
+
+Support sorting by:
+
+- Recently added.
+- Oldest first.
+- Recently updated.
+- Alphabetical title.
+
+Support filters for:
+
+- Collections.
+- Design styles.
+- Tags.
+- Favorites.
+- Reference type: image, URL, or both.
+
+Provide a useful search field that searches titles, notes, tags, URLs, and available design-analysis terms.
+
+Include clear loading, empty, error, and no-results states.
+
+---
+
+# 6. QUICK SAVE — THE MOST IMPORTANT WORKFLOW
+
+Saving a new reference should take only a few seconds.
+
+Create a clearly visible button labeled "+ Add Inspiration" or "Quick Save".
+
+Clicking it should open a clean modal or dedicated form with two options:
+
+## Option A: Upload an image
+
+Allow me to:
+
+- Choose an image from my computer.
+- Drag and drop an image into the upload area.
+- See an image preview before saving.
+- Enter an optional title.
+- Add optional personal notes.
+- Assign optional collections and tags.
+- Save the reference.
+
+Support common image formats such as PNG, JPEG, and WebP.
+
+Validate file types and file sizes.
+
+Provide upload progress, clear errors, and a retry option when appropriate.
+
+Preserve the original uploaded image whenever practical. If generating thumbnails or optimized copies, retain access to the original.
+
+Do not pretend an image was uploaded when it has not been stored successfully.
+
+## Option B: Save a website URL
+
+Allow me to paste a website URL.
+
+When possible, retrieve useful information such as:
+
+- Page title.
+- Website domain.
+- Page description.
+- Preview image.
+- Original URL.
+
+Use safe server-side metadata retrieval or an appropriate external service.
+
+Do not assume every website allows automated access. Some websites block previews, require authentication, or prevent scraping.
+
+If metadata cannot be retrieved, the reference must still be saveable.
+
+Provide an optional manual title, image upload, and personal notes.
+
+Always preserve the original URL exactly as submitted after appropriate URL validation and normalization decisions.
+
+Prevent server-side request forgery if the backend fetches external URLs. Validate protocols, block localhost and private network destinations, restrict redirects, and apply safe response-size and timeout limits.
+
+Do not bypass website restrictions or attempt to access protected content.
+
+## Option C: Save an image and URL together
+
+Support saving a screenshot alongside its source URL.
+
+This should be a first-class workflow, not an afterthought.
+
+## Quick Save design principles
+
+- Minimal fields.
+- Optional title and notes.
+- No mandatory AI analysis.
+- No unnecessary multi-step wizard.
+- Clear success and error feedback.
+- No accidental loss of form data.
+- Save to persistent storage before showing success.
+
+After saving, return me to my library or allow me to continue adding references.
+
+---
+
+# 7. REFERENCE DETAIL PAGE
+
+When I open a saved reference, show its original image or available preview prominently.
+
+The detail page should contain the following sections.
+
+## A. Reference information
+
+Display:
+
+- Title.
+- Original URL and a link to open the source website.
+- Date saved.
+- Personal notes.
+- Collections.
+- Tags.
+- Favorite toggle.
+- Edit action.
+- Delete or move to Trash action.
+
+Allow me to edit all user-editable fields.
+
+My personal notes must remain separate from AI-generated descriptions.
+
+## B. Design DNA
+
+Create a dedicated section called "Design DNA".
+
+This section should explain the visual design in a way that is useful to a developer learning and applying design principles.
+
+Include:
+
+1. Primary design style.
+2. Secondary or overlapping design styles.
+3. Short description of the style.
+4. What the style means.
+5. Common associations and emotional tone.
+6. Design vocabulary.
+7. Typography characteristics.
+8. Color palette.
+9. Layout and composition.
+10. Shapes, textures, and visual motifs.
+11. Interaction and animation characteristics, if observable.
+12. Why the design works.
+13. Where the style could be useful.
+14. Potential implementation ideas.
+15. A concise creative brief.
+
+The analysis must distinguish between visible evidence and inference.
+
+For example, if the screenshot shows a dark background, the AI can confidently identify a dark visual palette. However, it should not claim that the original website uses a specific framework or animation engine unless there is evidence.
+
+If the screenshot is static, do not invent animation behavior.
+
+If the AI is uncertain about a design classification, it should say so.
+
+## C. Design vocabulary
+
+Generate searchable terms associated with the reference.
+
+Examples may include:
+
+- Neo-Gothic.
+- Editorial design.
+- Brutalist typography.
+- Swiss grid.
+- Retro-futurism.
+- Minimalism.
+- Maximalism.
+- Cinematic composition.
+- High contrast.
+- Asymmetric layout.
+- Grain texture.
+- Oversized typography.
+- Monochromatic palette.
+- Geometric composition.
+- Tactile interface.
+- Neo-brutalism.
+- Y2K aesthetics.
+
+These are examples, not a mandatory list.
+
+Do not assign random popular design labels simply to make the analysis appear sophisticated.
+
+Each suggested keyword should have a meaningful relationship to the image.
+
+Where useful, briefly explain unfamiliar terminology in plain language.
+
+Allow me to:
+
+- Add a tag manually.
+- Remove an incorrect tag.
+- Rename tags.
+- Re-run the analysis.
+- Edit the generated description.
+- Mark a style as primary.
+- Add the reference to additional collections.
+
+Never overwrite my personal notes or custom tags during reanalysis.
+
+---
+
+# 8. AI DESIGN ANALYSIS
+
+Integrate a real vision-capable AI model through a secure backend endpoint.
+
+Do not place private API keys inside frontend JavaScript, HTML, CSS, browser-visible configuration, or public repositories.
+
+Use environment variables and a server-side API route or backend function.
+
+The AI should analyze an explicitly selected saved reference when I request it.
+
+Do not automatically send every uploaded image to an AI service without my action.
+
+Provide a button such as "Analyze Design" or "Generate Design DNA".
+
+While the analysis is running, show a useful loading state.
+
+If analysis fails, preserve the original reference and all user-entered information.
+
+Allow retries.
+
+## AI output structure
+
+Use a structured response format suitable for storing in the database.
+
+A useful analysis schema could contain:
+
+- `summary`
+- `primary_style`
+- `secondary_styles`
+- `visual_mood`
+- `associations`
+- `keywords`
+- `typography`
+- `color_palette`
+- `layout`
+- `shapes_and_textures`
+- `interaction_observations`
+- `why_it_works`
+- `potential_uses`
+- `implementation_ideas`
+- `creative_brief`
+- `reusable_prompt`
+- `confidence_or_uncertainty`
+
+Validate the response before saving it.
+
+Handle malformed or incomplete AI responses gracefully.
+
+Use a consistent schema and avoid storing the entire AI response as an unstructured string if it can reasonably be represented as structured data.
+
+## AI analysis prompt requirements
+
+The analysis instruction must tell the AI:
+
+"You are a knowledgeable visual design analyst and experienced web designer. Analyze the supplied reference using only the visual evidence available. Explain the design language clearly and practically.
+
+Identify the dominant style and any secondary influences. Explain what the design communicates, which visual characteristics create that impression, and how the composition, typography, colors, spacing, textures, and shapes contribute to the result.
+
+Generate specific, useful search keywords rather than vague adjectives. Explain unfamiliar design terminology briefly. Separate observations from interpretations. Do not invent unseen interactions, technologies, responsive behavior, or implementation details.
+
+Finish with practical guidance that helps a developer apply the same underlying visual principles in an original project, without requiring an exact copy of the reference."
+
+---
+
+# 9. REUSABLE PROMPT GENERATOR
+
+This is a core feature, not an optional decorative AI button.
+
+For every analyzed reference, generate a prompt I can reuse with an AI coding assistant or website-generation tool.
+
+The prompt should communicate the design foundation rather than merely describing the screenshot.
+
+It should include:
+
+- Overall visual direction.
+- Primary and secondary design styles.
+- Mood and intended impression.
+- Color palette.
+- Typography direction.
+- Layout principles.
+- Spacing and composition.
+- Shapes, textures, and motifs.
+- Relevant interface characteristics.
+- Practical implementation guidance.
+- Accessibility and readability considerations.
+- What to avoid.
+- How to adapt the visual direction to a different project.
+
+The generated prompt should be specific enough to produce a coherent result.
+
+Avoid vague prompts such as "make it modern, beautiful, futuristic, and premium."
+
+Instead, describe concrete visual characteristics and explain how they work together.
+
+## Prompt customization
+
+Allow me to edit the generated prompt.
+
+Provide a copy button.
+
+Where practical, let me enter a short target-project description so the AI can adapt the reference's design principles to my intended project.
+
+For example:
+
+Target project: Personal developer portfolio.
+
+The output should translate the saved reference into a portfolio-specific visual direction without changing the underlying design characteristics that made me save it.
+
+The application should never overwrite my original reference or its analysis when generating an adapted prompt.
+
+---
+
+# 10. CREATIVE BRIEF GENERATOR
+
+Create a concise, reusable design brief for each reference.
+
+The brief should answer:
+
+- What is the overall visual direction?
+- What makes this design distinctive?
+- Which colors and typography define it?
+- How is the layout organized?
+- What emotional response does it aim to create?
+- Which elements should be prioritized?
+- Which visual characteristics should be avoided?
+- How could the design direction be applied to a new project?
+
+Keep briefs practical rather than unnecessarily long.
+
+Make them editable and copyable.
+
+Store them separately from personal notes and the original AI analysis.
+
+---
+
+# 11. COLLECTIONS AND PERSONAL ORGANIZATION
+
+Allow me to create, rename, edit, and delete collections.
+
+Example collections:
+
+- Website Inspiration.
+- Gothic and Dark UI.
+- Portfolio Ideas.
+- Typography.
+- Color Palettes.
+- Animation References.
+- Landing Pages.
+- Creative Experiments.
+- Future Projects.
+- Unsorted.
+
+These are merely examples. Let me define my own collection names.
+
+A reference can belong to multiple collections.
+
+Removing a reference from a collection must not delete the reference itself.
+
+Deleting a collection must not accidentally delete all references inside it.
+
+Provide an easy way to move or assign multiple references to a collection.
+
+## Design Styles page
+
+Create a page that groups saved references by their identified design styles.
+
+For example, clicking "Neo-Gothic" should show all saved references that have that style assigned.
+
+Show a short description of the style and its associated vocabulary where available.
+
+Only show styles represented in my actual library, unless clearly labeled as a user-created or manually browsable style category.
+
+Allow me to correct incorrect classifications manually.
+
+Do not force every reference into a single category.
+
+A reference can have a primary style, secondary styles, and custom tags.
+
+---
+
+# 12. SEARCH, FILTERS, AND DISCOVERY
+
+Build a useful global search system.
+
+Search should work across:
+
+- Titles.
+- Personal notes.
+- Original URLs.
+- Domains.
+- User-created tags.
+- AI-generated keywords.
+- Design styles.
+- Creative briefs.
+
+Add filters for collection, favorites, reference type, and design style.
+
+Use sorting and filtering controls that remain understandable and do not overwhelm the interface.
+
+Include an "Unsorted" or "Needs Organization" view.
+
+Do not build a recommendation engine that invents inspiration I never saved.
+
+The goal is to retrieve and understand my own references.
+
+Optional future functionality may include finding similar saved references using visual similarity or shared design vocabulary, but it must not delay the essential library features.
+
+---
+
+# 13. FAVORITES, RECENTLY ADDED, AND TRASH
+
+Favorites:
+
+Allow me to mark references I particularly like.
+
+Recently Added:
+
+Display recently saved references in chronological order.
+
+Trash:
+
+Provide a recovery area for deleted references.
+
+Use soft deletion where appropriate so I can restore a reference before permanently deleting it.
+
+Make permanent deletion explicit and confirm destructive actions.
+
+If deleting a reference that has an uploaded image, correctly handle the relationship between the database record and the stored image file.
+
+Do not permanently delete an image if it is still referenced by another valid record.
+
+Never report that deletion or restoration succeeded unless the operation actually completed.
+
+---
+
+# 14. PRIVACY AND AUTHENTICATION
+
+This application is intended for my personal use.
+
+Implement secure authentication using an established provider such as Supabase Auth.
+
+The app should not publicly expose my inspiration library.
+
+Requirements:
+
+- Authenticated access to private pages.
+- User-specific database records.
+- Row Level Security on all private tables.
+- Authorization checks on backend operations.
+- Private image storage.
+- Policies that prevent other users from accessing my files.
+- Secure environment variable handling.
+- Safe sign-out behavior.
+- No hardcoded production credentials.
+- No public access to saved references by default.
+
+Do not rely only on hiding the interface when a user is not logged in.
+
+Every protected data operation must enforce authorization on the server or through database and storage security policies.
+
+Do not log API keys, authentication tokens, or unnecessary private content.
+
+If local development requires test credentials, document them clearly and keep them separate from production secrets.
+
+---
+
+# 15. DATABASE AND STORAGE ARCHITECTURE
+
+Use Supabase for authentication, PostgreSQL, and private object storage if compatible with the available environment.
+
+Keep the implementation maintainable.
+
+Suggested core tables:
+
+## `profiles`
+
+- `id`
+- `display_name`
+- `created_at`
+
+## `references`
+
+- `id`
+- `user_id`
+- `title`
+- `source_url`
+- `source_domain`
+- `image_storage_path`
+- `original_filename`
+- `personal_notes`
+- `is_favorite`
+- `created_at`
+- `updated_at`
+- `deleted_at`
+
+## `collections`
+
+- `id`
+- `user_id`
+- `name`
+- `description`
+- `created_at`
+- `updated_at`
+
+## `reference_collections`
+
+- `reference_id`
+- `collection_id`
+
+## `tags`
+
+- `id`
+- `user_id`
+- `name`
+- `created_at`
+
+## `reference_tags`
+
+- `reference_id`
+- `tag_id`
+- `tag_origin`
+
+## `design_analyses`
+
+- `id`
+- `reference_id`
+- `user_id`
+- `model_identifier`
+- `analysis_json`
+- `creative_brief`
+- `reusable_prompt`
+- `created_at`
+- `updated_at`
+
+You may refine the schema if a better design is justified.
+
+Use appropriate foreign keys, indexes, uniqueness rules, and deletion behavior.
+
+Prevent duplicate or invalid relationships.
+
+Enforce user ownership consistently.
+
+Keep original reference information separate from AI-generated analysis.
+
+Consider how storage files are cleaned up after deletion, failed uploads, or account removal.
+
+Create database migrations and storage policy instructions where appropriate.
+
+Do not merely provide SQL in a chat response while leaving the actual application disconnected from it.
+
+---
+
+# 16. PERSISTENCE AND BACKUP
+
+The library must survive browser refreshes, sign-outs, and normal application restarts.
+
+Do not use browser memory as the only source of truth.
+
+Do not rely on `localStorage` as the permanent storage system for uploaded images.
+
+Use the database and object storage for persistent data.
+
+## Backup and export
+
+Provide a backup section in Settings.
+
+Support exporting library metadata in a portable format such as JSON.
+
+Where practical, include a ZIP export containing metadata and original image files, organized clearly.
+
+The export should preserve:
+
+- Reference titles.
+- Source URLs.
+- Notes.
+- Tags.
+- Collections.
+- Favorites.
+- AI analyses.
+- Creative briefs.
+- Reusable prompts.
+- Relevant timestamps.
+
+Document the backup and restore workflow.
+
+If implementing full restoration is feasible, validate imported files and metadata before making changes to the live library.
+
+Do not silently overwrite existing references during restoration.
+
+Provide clear confirmation and progress feedback for large exports.
+
+A backup feature should actually generate usable files, not just display an export button.
+
+Do not claim to have an automated backup schedule unless one has actually been implemented.
+
+---
+
+# 17. SETTINGS
+
+Create a simple Settings page.
+
+Include:
+
+- Account information.
+- Sign-out.
+- Backup and export.
+- Data restoration, if implemented.
+- AI configuration status.
+- Optional analysis preferences.
+- A brief explanation of how reference images are sent to the AI provider.
+- Storage or backup information where available.
+
+Do not create unnecessary settings merely to make the application appear more complete.
+
+---
+
+# 18. TECHNICAL IMPLEMENTATION
+
+The preferred frontend technologies are:
+
+- HTML.
+- CSS.
+- JavaScript.
+
+I want understandable, maintainable code.
+
+Do not use React, Next.js, Vue, or another frontend framework unless I explicitly approve changing the requirement.
+
+Use a small backend where necessary for authentication integration, secure AI API calls, and website metadata retrieval.
+
+If using a backend framework is necessary, explain why and keep it simple.
+
+Use Supabase for persistent database and storage functionality where appropriate.
+
+## Code quality requirements
+
+- Clear folder structure.
+- Separate HTML, CSS, and JavaScript responsibilities.
+- Reusable functions and components where appropriate without unnecessary abstraction.
+- Meaningful variable and function names.
+- Comments explaining important or non-obvious logic.
+- Readable asynchronous code.
+- Input validation.
+- Error handling.
+- Loading states.
+- Empty states.
+- Responsive behavior.
+- Accessible controls.
+- Keyboard navigation.
+- Sensible focus indicators.
+- Semantic HTML.
+- Maintainable CSS variables.
+- No unnecessary dependencies.
+- No duplicated application logic.
+- No massive single-file implementation if a modular structure is practical.
+
+Avoid clever code that is difficult for a learner to understand.
+
+Prioritize clarity over showing off advanced programming techniques.
+
+---
+
+# 19. RESPONSIVE DESIGN
+
+The application is primarily a personal desktop workspace but should work well on mobile and tablet.
+
+Desktop:
+
+- Compact sidebar.
+- Spacious gallery.
+- Efficient search and filtering.
+- Comfortable reference detail layout.
+
+Tablet:
+
+- Responsive gallery columns.
+- Adaptable sidebar.
+- Accessible detail panels.
+
+Mobile:
+
+- Collapsible navigation.
+- Touch-friendly actions.
+- Responsive image grid.
+- Easy image upload.
+- Readable design-analysis sections.
+- No horizontal overflow.
+
+Use CSS Grid and Flexbox appropriately.
+
+Ensure that modals, forms, and menus remain usable on small screens.
+
+---
+
+# 20. ACCESSIBILITY AND USABILITY
+
+Implement:
+
+- Semantic buttons and links.
+- Labels for form fields.
+- Keyboard-accessible menus and dialogs.
+- Visible focus states.
+- Appropriate image alternative text.
+- Sufficient text contrast.
+- Clear validation messages.
+- Meaningful status feedback.
+- Reduced-motion support.
+
+Do not rely on color alone to communicate status.
+
+Animations should be restrained and must not interfere with usability.
+
+---
+
+# 21. ERROR HANDLING AND RELIABILITY
+
+Handle real-world failure cases, including:
+
+- Network disconnection.
+- Authentication expiration.
+- Failed uploads.
+- Unsupported image formats.
+- Oversized files.
+- Invalid URLs.
+- Unavailable source websites.
+- Failed metadata retrieval.
+- AI service errors.
+- Invalid AI output.
+- Database failures.
+- Storage permission failures.
+- Duplicate actions.
+- Interrupted exports.
+
+Preserve unsaved user input where practical.
+
+Provide clear messages that explain what happened and how to retry.
+
+Never use fake success notifications.
+
+Never silently replace a missing image with unrelated content.
+
+Never discard saved user data simply because an optional AI feature failed.
+
+---
+
+# 22. REQUIRED PAGES
+
+Implement these actual application screens:
+
+1. Authentication.
+2. Main inspiration library.
+3. Quick Save modal or page.
+4. Reference detail page.
+5. Edit reference interface.
+6. Collections overview.
+7. Collection detail view.
+8. Design Styles overview.
+9. Design Style detail view.
+10. Favorites.
+11. Recently Added.
+12. Trash and restoration.
+13. Settings.
+14. Backup and export interface.
+
+All navigation must work.
+
+All forms must work.
+
+All buttons must perform their advertised actions.
+
+All saved content must come from the actual application data rather than hardcoded demo cards.
+
+---
+
+# 23. IMPLEMENTATION PRIORITIES
+
+Build in this order:
+
+## Priority 1 — A working personal library
+
+Implement:
+
+- Authentication.
+- Main layout.
+- Quick Save.
+- Image uploads.
+- Website URL saving.
+- Persistent storage.
+- Reference detail pages.
+- Editing and deletion.
+- Search.
+- Collections.
+- Favorites.
+
+## Priority 2 — Protection and data portability
+
+Implement:
+
+- Database security policies.
+- Private object storage.
+- Trash and recovery.
+- JSON export.
+- Image and metadata backup.
+- Reliable error handling.
+
+## Priority 3 — Design intelligence
+
+Implement:
+
+- AI vision analysis.
+- Structured Design DNA reports.
+- Style categorization.
+- Design vocabulary.
+- Creative brief generation.
+- Reusable prompt generation.
+- Manual editing of AI results.
+
+## Priority 4 — Final polish
+
+Improve:
+
+- Responsive layouts.
+- Loading states.
+- Empty states.
+- Keyboard accessibility.
+- Visual consistency.
+- Performance.
+- Small interaction details.
+
+Do not spend all your effort on visual polish while leaving core functionality incomplete.
+
+---
+
+# 24. ACCEPTANCE TESTS
+
+Before declaring the application complete, verify the following:
+
+1. I can create an account and sign in.
+2. Private pages cannot be accessed without authorization.
+3. I can upload an image and see it in my library.
+4. The image remains available after a browser refresh and a later sign-in.
+5. I can save a website URL even when its metadata cannot be retrieved.
+6. I can save a screenshot and its source URL together.
+7. I can edit titles and personal notes.
+8. I can create and rename collections.
+9. I can assign one reference to multiple collections.
+10. I can add, edit, and remove tags.
+11. I can mark references as favorites.
+12. I can search for a reference by title, note, or tag.
+13. I can move a reference to Trash and restore it.
+14. I can permanently delete a reference with appropriate confirmation.
+15. I can request AI analysis when a valid AI API is configured.
+16. The AI produces a structured Design DNA report.
+17. I can edit AI-generated content without changing my personal notes.
+18. I can copy a generated creative brief and reusable prompt.
+19. The application remains usable if the AI API fails.
+20. I can export my library metadata and original images using the implemented backup workflow.
+21. Database and storage policies prevent unauthorized access to my private records.
+22. All primary navigation links and action buttons work.
+23. The layout works on desktop and mobile.
+24. The browser console has no unresolved critical errors.
+25. The application does not depend on hardcoded example references for normal operation.
+
+Do not mark a test as passed unless it has actually been verified.
+
+---
+
+# 25. DEVELOPMENT WORKFLOW
+
+Follow this workflow while building the application.
+
+First, inspect the current working directory and available tools.
+
+If an existing project is present, inspect it before modifying files.
+
+If the directory is empty, create a clean project structure.
+
+Then:
+
+1. Establish the architecture.
+2. Implement the visual foundation and navigation.
+3. Build the core data model.
+4. Connect the application to persistent storage.
+5. Implement the save and retrieval workflows.
+6. Add security and backup features.
+7. Add AI integration.
+8. Test the complete application.
+9. Fix errors.
+10. Document setup and usage.
+
+Do not stop after generating a plan or showing sample components.
+
+Do not merely return a collection of code snippets for me to assemble manually if you have access to a development environment that can create the project directly.
+
+Create and edit the actual project files.
+
+If a required service account, API key, or credential is unavailable, build the integration correctly, identify the exact configuration needed, and clearly distinguish implemented functionality from functionality awaiting configuration.
+
+Do not invent API credentials or claim external services are connected when they are not.
+
+If the task is too large to finish in one response, continue working in coherent implementation stages. Preserve the existing work and do not restart the project unnecessarily.
+
+At the end, provide:
+
+- A summary of the implemented features.
+- The project folder structure.
+- Installation and run commands.
+- Environment variables that need configuration.
+- Database setup and migration instructions.
+- Any remaining limitations.
+- A list of tests that were actually performed.
+
+---
+
+# FINAL PRODUCT STANDARD
+
+The final application should feel like a personal tool I will genuinely want to use for years.
+
+It should be visually restrained, fast, organized, private, reliable, and easy to understand.
+
+Its most important qualities are:
+
+1. My inspiration is safely preserved.
+2. I can save references quickly.
+3. I can find them later.
+4. I can organize them according to my own taste.
+5. I can understand their visual language.
+6. I can turn them into actionable creative direction.
+7. I remain in control of my data and AI-generated content.
+
+Build a coherent, working product instead of a flashy prototype.
+
+**Start by inspecting the development environment, then build DesignVault.**

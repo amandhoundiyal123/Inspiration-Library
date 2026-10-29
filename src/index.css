@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F4E7CF;
+    --surface-ivory: #FFF0D7;
+    --accent-yellow: #FFE344;
+    --accent-orange: #FF682D;
+    --accent-orange-hover: #E6571F;
+    --text-black: #171511;
+    --text-muted: #756858;
+    --border-dark: #29231C;
+    --border-light: #DFCDB2;
+  }
+
+  body {
+    background-color: #0A1C3E;
+    color: var(--text-black);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  .font-pixel {
+    font-family: 'Silkscreen', 'Press Start 2P', monospace;
+    letter-spacing: 0.04em;
+  }
+
+  .font-pixel-heading {
+    font-family: 'Press Start 2P', monospace;
+    letter-spacing: -0.02em;
+  }
+
+  .font-terminal {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Crisp retro-editorial scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #E8D8BD;
+  border-left: 2px solid #29231C;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE344;
+  border: 2px solid #29231C;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF682D;
+}
+
+/* Crisp retro shadows */
+.shadow-retro {
+  box-shadow: 2px 2px 0px #29231C;
+}
+.shadow-retro-md {
+  box-shadow: 3px 3px 0px #29231C;
+}
+.shadow-retro-lg {
+  box-shadow: 5px 5px 0px #29231C;
+}
+
+/* Retro Windows bevel styling */
+.bevel-retro-outset {
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #29231C;
+  border-bottom: 2px solid #29231C;
+}
+
+.bevel-retro-inset {
+  border-top: 2px solid #29231C;
+  border-left: 2px solid #29231C;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+/* Retro XP Windows Title Bar Gradient */
+.titlebar-gradient {
+  background: linear-gradient(180deg, #0A5BC4 0%, #1773E8 12%, #0E4FAA 50%, #003AA0 100%);
+}
+
+.titlebar-inactive-gradient {
+  background: linear-gradient(180deg, #7A96DF 0%, #617DC6 50%, #4662A8 100%);
+}
+
+/* Retro Taskbar Gradient */
+.taskbar-gradient {
+  background: linear-gradient(180deg, #1F54B0 0%, #245EDC 8%, #1D4DB0 50%, #153E90 100%);
+}
+
+/* Subtle retro pixel dither overlay for desktop */
+.pixel-dither {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 3px 3px;
+}

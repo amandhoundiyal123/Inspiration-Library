@@ -1,0 +1,8 @@
+{
+  "name": "DesignVault",
+  "description": "A private, personal design inspiration library & AI design intelligence workspace for creative web developers.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
